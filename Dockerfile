@@ -1,3 +1,5 @@
-FROM aibar/box
+FROM box
 
-ADD fs.tar.gz /
+ENV LANG=C.UTF-8
+
+ADD rootfs.tar.gz /
