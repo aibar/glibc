@@ -1,4 +1,4 @@
-FROM box
+FROM aibar/box
 
 ENV LANG=C.UTF-8
 
