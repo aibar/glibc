@@ -1,4 +1,4 @@
-FROM aibar/box
+FROM walkingdevs/box
 
 ENV LANG=C.UTF-8
 

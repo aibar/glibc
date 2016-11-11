@@ -1,7 +1,7 @@
 #!/bin/bash
 
 docker build --rm \
-       -f Dockerfile.builder \
+       -f Dockerfile-builder \
        -t glibc-builder .
 
 docker run --rm -it \
