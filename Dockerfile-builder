@@ -1,5 +1,7 @@
 FROM debian:8.6
 
+COPY nsswitch.conf /etc
+
 RUN \
     # Glibc
     mkdir -pv /out/lib && \
@@ -32,6 +34,10 @@ RUN \
     # Locale
     mkdir -pv /out/usr/lib/locale && \
     cp -r /usr/lib/locale/C.UTF-8 /out/usr/lib/locale && \
+
+    # nsswitch.conf
+    mkdir -pv /out/etc && \
+    cp /etc/nsswitch.conf /out/etc && \
 
     cd /out && \
     tar czfv /rootfs.tar.gz ./*
